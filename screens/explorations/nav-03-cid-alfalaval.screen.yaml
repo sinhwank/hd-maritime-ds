@@ -1,0 +1,48 @@
+# 탐색용 화면 스펙 — HD-MDS Explore 라이브러리 + Explore-* 모드 사용. 결정 아님.
+id: nav-03-cid-alfalaval
+title: CID 협수로 조선 · Alfa Laval 방향 (탐색)
+domain: navigation
+status: draft
+roles:
+- navigator
+scenario: 트랙 제어 중 변침, ROT −12°/min, 러더 PORT 15°, 횡풍 20 kn, 수심 18 m
+context:
+  operationMode:
+  - maneuvering
+  risk: elevated
+  aiAgent: false
+display:
+  target: mfd
+  resolution: 1920x1080
+  input: touch
+  themes:
+  - day
+  size: medium
+modules:
+- id: topbar
+  region: top
+  components:
+  - Topbar
+- id: breadcrumb
+  region: top
+- id: equipment-cards
+  region: main
+  components:
+  - Tag
+  - Rudder
+  - Gauge-radial-270
+  - Tunnel-thruster
+  notes: 계기를 장비 단위로 — HiCONiS와 같은 사고방식
+- id: mode-bar
+  region: bottom
+  components:
+  - Toggle button item
+  - Sequence loading spinner
+  notes: 오토파일럿 명령 진행 중 상태
+states:
+- normal
+- caution-wind
+refs:
+- knowledge/explorations/hi-ins-concepts.md
+- tokens/explorations/alfalaval.yaml
+- figma:testBoard/디자인 · Hi-INS/CID · Alfa Laval

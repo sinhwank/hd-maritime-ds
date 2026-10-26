@@ -1,0 +1,48 @@
+# 탐색용 화면 스펙 — HD-MDS Explore 라이브러리 + Explore-* 모드 사용. 결정 아님.
+id: nav-03-cid-kongsberg
+title: CID 협수로 조선 · Kongsberg 방향 (탐색)
+domain: navigation
+status: draft
+roles:
+- navigator
+scenario: 트랙 제어 중 변침, ROT −12°/min, 러더 PORT 15°, 횡풍 20 kn, 수심 18 m
+context:
+  operationMode:
+  - maneuvering
+  risk: elevated
+  aiAgent: false
+display:
+  target: mfd
+  resolution: 1920x1080
+  input: touch
+  themes:
+  - day
+  size: regular
+modules:
+- id: topbar
+  region: top
+  components:
+  - Topbar
+- id: tool-rail
+  region: left
+  components:
+  - Navigation Item
+- id: instrument-grid
+  region: main
+  components:
+  - Compass-radial
+  - ROT-linear
+  - Rudder
+  - Azimuth-thruster
+  - Tunnel-thruster
+  - Wind
+  - Pitch-roll
+  - Alert message item
+  notes: 현행 CID 정보량 유지, 4×3 같은 크기 칸 + HDG 히어로
+states:
+- normal
+- caution-wind
+refs:
+- knowledge/explorations/hi-ins-concepts.md
+- tokens/explorations/kongsberg.yaml
+- figma:testBoard/디자인 · Hi-INS/CID · Kongsberg

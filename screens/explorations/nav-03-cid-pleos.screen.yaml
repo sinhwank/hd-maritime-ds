@@ -1,0 +1,54 @@
+# 탐색용 화면 스펙 — HD-MDS Explore 라이브러리 + Explore-* 모드 사용. 결정 아님.
+id: nav-03-cid-pleos
+title: CID 협수로 조선 · Pleos 방향 (탐색)
+domain: navigation
+status: draft
+roles:
+- navigator
+scenario: 트랙 제어 중 변침, ROT −12°/min, 러더 PORT 15°, 횡풍 20 kn, 수심 18 m
+context:
+  operationMode:
+  - maneuvering
+  risk: elevated
+  aiAgent: false
+display:
+  target: mfd
+  resolution: 1920x1080
+  input: touch
+  themes:
+  - day
+  size: large
+modules:
+- id: status-bar
+  region: top
+  components:
+  - Alert button
+- id: driving-view
+  region: left-third
+  components:
+  - Instrument/Value-enhanced
+  - Compass-radial
+  notes: HDG·ROT를 ECDIS·BAMS와 같은 자리에
+- id: steering-propulsion
+  region: app-window-1
+  components:
+  - Rudder
+  notes: '"배를 어떻게 움직이고 있나"'
+- id: environment
+  region: app-window-2
+  components:
+  - Wind
+  notes: '"바깥 조건은 어떤가"'
+- id: gnb
+  region: bottom
+  components:
+  - Toggle button item
+  - Navigation Item
+  notes: 오토파일럿 모드 상시 표시, 조작은 하단
+states:
+- normal
+- caution-wind
+refs:
+- knowledge/explorations/hi-ins-concepts.md
+- tokens/explorations/pleos.yaml
+- figma:testBoard/디자인 · Hi-INS/CID · Pleos

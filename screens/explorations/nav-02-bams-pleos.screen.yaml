@@ -1,0 +1,55 @@
+# 탐색용 화면 스펙 — HD-MDS Explore 라이브러리 + Explore-* 모드 사용. 결정 아님.
+id: nav-02-bams-pleos
+title: BAMS 다중 경보 · Pleos 방향 (탐색)
+domain: navigation
+status: draft
+roles:
+- navigator
+scenario: 미확인 Alarm 1(CPA/TCPA), Warning 2(백업 GYRO·SOG 실패), Caution 3, 확인됨 다수
+context:
+  operationMode:
+  - sea-passage
+  risk: elevated
+  aiAgent: false
+display:
+  target: mfd
+  resolution: 1920x1080
+  input: touch
+  themes:
+  - day
+  size: large
+modules:
+- id: status-bar
+  region: top
+  components:
+  - Alert button
+  notes: 같은 상단 띠
+- id: driving-view
+  region: left-third
+  components:
+  - Instrument/Value-enhanced
+  notes: 경보 대응 중에도 HDG·SOG 유지
+- id: hero-alert
+  region: app-window
+  components:
+  - Alert message item
+  - Button
+  notes: 한 번에 하나를 크게, Silence→ACK 2단계 큰 버튼
+- id: alert-cards
+  region: app-window
+  components:
+  - Alert message item
+  notes: 카드 한 장=경보 하나, 터치 오조작 감소
+- id: gnb
+  region: bottom
+  components:
+  - Navigation Item
+  notes: 같은 GNB
+states:
+- alarm-active
+- silenced
+- comm-loss
+refs:
+- knowledge/explorations/hi-ins-concepts.md
+- tokens/explorations/pleos.yaml
+- figma:testBoard/디자인 · Hi-INS/BAMS · Pleos

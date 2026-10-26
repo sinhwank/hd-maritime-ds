@@ -1,0 +1,58 @@
+# 탐색용 화면 스펙 — HD-MDS Explore 라이브러리 + Explore-* 모드 사용. 결정 아님.
+id: nav-02-bams-alfalaval
+title: BAMS 다중 경보 · Alfa Laval 방향 (탐색)
+domain: navigation
+status: draft
+roles:
+- navigator
+scenario: 미확인 Alarm 1(CPA/TCPA), Warning 2(백업 GYRO·SOG 실패), Caution 3, 확인됨 다수
+context:
+  operationMode:
+  - sea-passage
+  risk: elevated
+  aiAgent: false
+display:
+  target: mfd
+  resolution: 1920x1080
+  input: touch
+  themes:
+  - day
+  size: medium
+modules:
+- id: topbar
+  region: top
+  components:
+  - Topbar
+- id: breadcrumb
+  region: top
+- id: type-filter
+  region: top
+  components:
+  - Toggle button item
+  notes: 경보 외 Advice·Message 분리로 경보 피로 감소
+- id: source-cards
+  region: left
+  components:
+  - Tag
+  notes: 어느 장비가 문제인가를 먼저
+- id: notification-list
+  region: right
+  components:
+  - Checkbox
+  - Alert message item
+  - Tag
+  - Button
+  notes: 다중 선택 확인
+- id: mode-bar
+  region: bottom
+  components:
+  - Toggle button item
+  notes: Sound·Grouping은 모드
+states:
+- alarm-active
+- silenced
+- comm-loss
+refs:
+- knowledge/explorations/hi-ins-concepts.md
+- tokens/explorations/alfalaval.yaml
+- figma:testBoard/디자인 · Hi-INS/BAMS · Alfa Laval

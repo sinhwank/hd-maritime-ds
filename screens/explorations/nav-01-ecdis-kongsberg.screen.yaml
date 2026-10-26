@@ -1,0 +1,59 @@
+# 탐색용 화면 스펙 — HD-MDS Explore 라이브러리 + Explore-* 모드 사용. 결정 아님.
+id: nav-01-ecdis-kongsberg
+title: ECDIS 항로 감시 · Kongsberg 방향 (탐색)
+domain: navigation
+status: draft
+roles:
+- navigator
+scenario: 트랙 제어로 항로 감시 중, 다음 변침점 3.2 NM 전, 타선 017 CPA 0.42 NM 접근(Warning)
+context:
+  operationMode:
+  - sea-passage
+  risk: elevated
+  aiAgent: false
+display:
+  target: mfd
+  resolution: 1920x1080
+  input: touch
+  themes:
+  - day
+  size: regular
+modules:
+- id: topbar
+  region: top
+  components:
+  - Topbar
+  notes: 얇은 상단 띠
+- id: tool-rail
+  region: left
+  components:
+  - Navigation Item
+  notes: 전문가용 도구 상시 노출, 최소 면적
+- id: chart
+  region: main
+  components:
+  - Map
+  - Track-lines
+  - Chart-object-vessel
+  notes: 중심에 핵심 1개
+- id: route-monitoring
+  region: right-stack
+  notes: 한 뷰 원칙 — 탭으로 숨기지 않음
+- id: targets
+  region: right-stack
+  components:
+  - Alert message item
+  notes: 타선 비교는 표가 가장 빠름
+- id: sensors
+  region: right-stack
+  notes: 센서 출처·상태 상시 표시
+- id: status-strip
+  region: bottom
+  notes: IMO ECDIS 상시 표시 항목
+states:
+- normal
+- warning-cpa
+refs:
+- knowledge/explorations/hi-ins-concepts.md
+- tokens/explorations/kongsberg.yaml
+- figma:testBoard/디자인 · Hi-INS/ECDIS · Kongsberg

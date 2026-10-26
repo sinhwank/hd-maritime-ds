@@ -1,0 +1,53 @@
+# 탐색용 화면 스펙 — HD-MDS Explore 라이브러리 + Explore-* 모드 사용. 결정 아님.
+id: nav-01-ecdis-alfalaval
+title: ECDIS 항로 감시 · Alfa Laval 방향 (탐색)
+domain: navigation
+status: draft
+roles:
+- navigator
+scenario: 트랙 제어로 항로 감시 중, 다음 변침점 3.2 NM 전, 타선 017 CPA 0.42 NM 접근(Warning)
+context:
+  operationMode:
+  - sea-passage
+  risk: elevated
+  aiAgent: false
+display:
+  target: mfd
+  resolution: 1920x1080
+  input: touch
+  themes:
+  - day
+  size: medium
+modules:
+- id: topbar
+  region: top
+  components:
+  - Topbar
+  notes: Alfa Laval HMI 상단 바
+- id: breadcrumb
+  region: top
+  notes: 통합 시스템에서 현재 위치
+- id: chart
+  region: main
+  components:
+  - Map
+  - Track-lines
+  - Chart-object-vessel
+  notes: 가장 큰 단일 영역
+- id: equipment-cards
+  region: right
+  components:
+  - Tag
+  notes: 장비 카드+상태 라벨 — 라벨만 훑어 이상 카드 발견
+- id: mode-bar
+  region: bottom
+  components:
+  - Toggle button item
+  notes: 모드 전환은 조작 영역으로 분리, 명령 진행 중 상태
+states:
+- normal
+- warning-cpa
+refs:
+- knowledge/explorations/hi-ins-concepts.md
+- tokens/explorations/alfalaval.yaml
+- figma:testBoard/디자인 · Hi-INS/ECDIS · Alfa Laval

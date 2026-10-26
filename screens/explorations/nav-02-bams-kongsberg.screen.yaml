@@ -1,0 +1,60 @@
+# 탐색용 화면 스펙 — HD-MDS Explore 라이브러리 + Explore-* 모드 사용. 결정 아님.
+id: nav-02-bams-kongsberg
+title: BAMS 다중 경보 · Kongsberg 방향 (탐색)
+domain: navigation
+status: draft
+roles:
+- navigator
+scenario: 미확인 Alarm 1(CPA/TCPA), Warning 2(백업 GYRO·SOG 실패), Caution 3, 확인됨 다수
+context:
+  operationMode:
+  - sea-passage
+  risk: elevated
+  aiAgent: false
+display:
+  target: mfd
+  resolution: 1920x1080
+  input: touch
+  themes:
+  - day
+  size: regular
+modules:
+- id: topbar
+  region: top
+  components:
+  - Topbar
+- id: tool-rail
+  region: left
+  components:
+  - Navigation Item
+- id: summary
+  region: top-strip
+  components:
+  - Alert counter item
+  notes: 전체 상황 한 줄 + 서버 이중화
+- id: alert-table
+  region: main
+  components:
+  - Alert table toolbar
+  - Alert table header
+  - Alert table row
+  notes: 전문가용 최고 밀도, 정렬·필터
+- id: detail
+  region: right
+  components:
+  - Alert message item
+  - Button
+  notes: 선택→판단→조치를 같은 자리에서
+- id: source-status
+  region: bottom
+  components:
+  - Tag
+  notes: 센서가 죽으면 경보도 안 온다 — 연결 상태를 먼저
+states:
+- alarm-active
+- silenced
+- comm-loss
+refs:
+- knowledge/explorations/hi-ins-concepts.md
+- tokens/explorations/kongsberg.yaml
+- figma:testBoard/디자인 · Hi-INS/BAMS · Kongsberg
