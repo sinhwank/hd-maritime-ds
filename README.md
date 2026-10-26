@@ -9,6 +9,7 @@ AI(Claude Code + Figma MCP)가 디자인 시스템과 대표 화면을 **스펙�
 |---|---|---|
 | Source_Open Bridge | OpenBridge 원본 12개 | 읽기 전용 기준선 |
 | Design System | [HD-MDS Library](https://www.figma.com/design/Lzn4HaD45rVmbtvm2a5lrP), [HD-MDS Icon Pack](https://www.figma.com/design/v6Jgh6gLpEcpNPk1UsjXQA) | OB 6.1 복제본을 HD에 맞게 수정 |
+| Design System | [HD-MDS Explore](https://www.figma.com/design/XXaTjmBNYWuugrWt3l8GRq) | 스타일 방향 탐색 전용 (`Explore-*` 모드, `tokens/explorations/`) |
 | Key Screen | [Test Board](https://www.figma.com/design/tRJnqDtLtS8zg1bTPUeVfZ) | 디자인 시스템으로 주요 화면 테스트 |
 
 ```

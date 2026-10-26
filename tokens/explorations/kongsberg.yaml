@@ -1,0 +1,283 @@
+# 탐색 방향: Kongsberg (EGGS · EcoAdvisor, K-Sim)
+# HD-MDS Explore 파일 전용 (figma.config.json → files.exploration). hd-tokens-apply 적용 대상이 아님.
+# Figma 모드: Color-primitives-day / component-primitives 의 "Explore-Kongsberg"
+# 생성: node scripts/explore-ramp.mjs --yaml (OB 램프 명도 유지, 색상·채도만 교체)
+# 출처: 리서치 파일 dIqDlbv8wWnv423lO4kWlM · EGGS 657:434~471. EcoAdvisor 패널 #2d3037·배경 #121214 화면 샘플링
+# 신뢰도: 추정 — 공개 디자인 시스템 없음. 케이스 이미지 기반
+# 경보(Alarm·Warning·Caution·Running·Critical-alarm·Notification)와 매질 색상 램프는 OB 원본 그대로 둔다.
+- collection: Color-primitives-day
+  variable: Primitives-day/Surface/100
+  modes: { Explore-Kongsberg: "#fcfcfc" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Surface/200
+  modes: { Explore-Kongsberg: "#f7f7f7" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Surface/300
+  modes: { Explore-Kongsberg: "#f0f0f1" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Surface/400
+  modes: { Explore-Kongsberg: "#dfe0e1" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Surface/000
+  modes: { Explore-Kongsberg: "#ffffff" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/100
+  modes: { Explore-Kongsberg: "#d9dee2" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/150
+  modes: { Explore-Kongsberg: "#c7ced5" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/200
+  modes: { Explore-Kongsberg: "#b9bfc6" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/250
+  modes: { Explore-Kongsberg: "#a2a8af" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/300
+  modes: { Explore-Kongsberg: "#898f95" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/350
+  modes: { Explore-Kongsberg: "#797f85" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/400
+  modes: { Explore-Kongsberg: "#6b7177" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/450
+  modes: { Explore-Kongsberg: "#5b6167" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/500
+  modes: { Explore-Kongsberg: "#4e545a" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/550
+  modes: { Explore-Kongsberg: "#42484e" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/600
+  modes: { Explore-Kongsberg: "#383e43" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/650
+  modes: { Explore-Kongsberg: "#2c3136" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/700
+  modes: { Explore-Kongsberg: "#1b2025" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/1000
+  modes: { Explore-Kongsberg: "#161b20" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/000
+  modes: { Explore-Kongsberg: "#ffffff" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/010
+  modes: { Explore-Kongsberg: "#fcfcfc" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/030
+  modes: { Explore-Kongsberg: "#f6f7f8" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/050
+  modes: { Explore-Kongsberg: "#eef0f2" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/100
+  modes: { Explore-Kongsberg: "#bae5f0" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/150
+  modes: { Explore-Kongsberg: "#9ad9e8" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/200
+  modes: { Explore-Kongsberg: "#7bcde1" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/250
+  modes: { Explore-Kongsberg: "#48b8d0" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/300
+  modes: { Explore-Kongsberg: "#099eb8" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/350
+  modes: { Explore-Kongsberg: "#048ea5" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/400
+  modes: { Explore-Kongsberg: "#047e93" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/450
+  modes: { Explore-Kongsberg: "#006c7e" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/500
+  modes: { Explore-Kongsberg: "#055e6f" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/550
+  modes: { Explore-Kongsberg: "#035160" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/600
+  modes: { Explore-Kongsberg: "#034450" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/650
+  modes: { Explore-Kongsberg: "#023640" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/700
+  modes: { Explore-Kongsberg: "#01252c" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/050
+  modes: { Explore-Kongsberg: "#ddf1f7" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Base/Blue
+  modes: { Explore-Kongsberg: "#0795ad" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/050-tint
+  modes: { Explore-Kongsberg: "#007e931c" }
+  reason: "청회색 강철 톤 무채색(H≈250, 채도 0.012) + 시안-틸 강조(H≈215)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: component-primitives
+  variable: Border-radius/br-2
+  modes: { Explore-Kongsberg: 2 }
+  reason: "직각에 가까운 모서리 — 2~4, 플로팅 6"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: component-primitives
+  variable: Border-radius/br-4
+  modes: { Explore-Kongsberg: 2 }
+  reason: "직각에 가까운 모서리 — 2~4, 플로팅 6"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: component-primitives
+  variable: Border-radius/br-6
+  modes: { Explore-Kongsberg: 4 }
+  reason: "직각에 가까운 모서리 — 2~4, 플로팅 6"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: component-primitives
+  variable: Border-radius/br-8
+  modes: { Explore-Kongsberg: 4 }
+  reason: "직각에 가까운 모서리 — 2~4, 플로팅 6"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: component-primitives
+  variable: Border-radius/br-12
+  modes: { Explore-Kongsberg: 6 }
+  reason: "직각에 가까운 모서리 — 2~4, 플로팅 6"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: component-primitives
+  variable: Border-radius/br-16
+  modes: { Explore-Kongsberg: 8 }
+  reason: "직각에 가까운 모서리 — 2~4, 플로팅 6"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: component-primitives
+  variable: Border-radius/br-24
+  modes: { Explore-Kongsberg: 12 }
+  reason: "직각에 가까운 모서리 — 2~4, 플로팅 6"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md

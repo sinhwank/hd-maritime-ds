@@ -1,0 +1,283 @@
+# 탐색 방향: Alfa Laval (EGGS · Bricks)
+# HD-MDS Explore 파일 전용 (figma.config.json → files.exploration). hd-tokens-apply 적용 대상이 아님.
+# Figma 모드: Color-primitives-day / component-primitives 의 "Explore-AlfaLaval"
+# 생성: node scripts/explore-ramp.mjs --yaml (OB 램프 명도 유지, 색상·채도만 교체)
+# 출처: @alds/bricks 0.2.1 npm 패키지 토큰 실측 (ColorGlobalSteal*, ColorGlobalWater100 #10387f, border-radius 0/120px) + 리서치 파일 657:171~425
+# 신뢰도: 실측(웹 DS) + 추정(HMI 화면)
+# 경보(Alarm·Warning·Caution·Running·Critical-alarm·Notification)와 매질 색상 램프는 OB 원본 그대로 둔다.
+- collection: Color-primitives-day
+  variable: Primitives-day/Surface/100
+  modes: { Explore-AlfaLaval: "#fcfcfc" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Surface/200
+  modes: { Explore-AlfaLaval: "#f7f7f7" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Surface/300
+  modes: { Explore-AlfaLaval: "#f0f0f0" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Surface/400
+  modes: { Explore-AlfaLaval: "#e0e0e0" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Surface/000
+  modes: { Explore-AlfaLaval: "#ffffff" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/100
+  modes: { Explore-AlfaLaval: "#dddddd" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/150
+  modes: { Explore-AlfaLaval: "#cdcdcd" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/200
+  modes: { Explore-AlfaLaval: "#bebebe" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/250
+  modes: { Explore-AlfaLaval: "#a7a7a7" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/300
+  modes: { Explore-AlfaLaval: "#8e8e8e" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/350
+  modes: { Explore-AlfaLaval: "#7e7e7e" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/400
+  modes: { Explore-AlfaLaval: "#707070" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/450
+  modes: { Explore-AlfaLaval: "#606060" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/500
+  modes: { Explore-AlfaLaval: "#535353" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/550
+  modes: { Explore-AlfaLaval: "#474747" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/600
+  modes: { Explore-AlfaLaval: "#3d3d3d" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/650
+  modes: { Explore-AlfaLaval: "#303030" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/700
+  modes: { Explore-AlfaLaval: "#1f1f1f" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/1000
+  modes: { Explore-AlfaLaval: "#1a1a1a" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/000
+  modes: { Explore-AlfaLaval: "#ffffff" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/010
+  modes: { Explore-AlfaLaval: "#fcfcfc" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/030
+  modes: { Explore-AlfaLaval: "#f7f7f7" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/050
+  modes: { Explore-AlfaLaval: "#f0f0f0" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/100
+  modes: { Explore-AlfaLaval: "#cbddfe" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/150
+  modes: { Explore-AlfaLaval: "#b3cefe" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/200
+  modes: { Explore-AlfaLaval: "#9cbffe" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/250
+  modes: { Explore-AlfaLaval: "#75a6ff" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/300
+  modes: { Explore-AlfaLaval: "#558aee" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/350
+  modes: { Explore-AlfaLaval: "#467ade" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/400
+  modes: { Explore-AlfaLaval: "#3b6cca" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/450
+  modes: { Explore-AlfaLaval: "#2f5bb1" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/500
+  modes: { Explore-AlfaLaval: "#274f9e" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/550
+  modes: { Explore-AlfaLaval: "#1f448b" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/600
+  modes: { Explore-AlfaLaval: "#183876" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/650
+  modes: { Explore-AlfaLaval: "#112c60" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/700
+  modes: { Explore-AlfaLaval: "#0a1e43" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/050
+  modes: { Explore-AlfaLaval: "#e4eeff" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Base/Blue
+  modes: { Explore-AlfaLaval: "#4c81e5" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/050-tint
+  modes: { Explore-AlfaLaval: "#015cff1c" }
+  reason: "순수 무채색 Steal 램프(OB 원본과 사실상 동일) + 짙은 네이비 Water 강조(H≈262, 채도 1.35배)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: component-primitives
+  variable: Border-radius/br-2
+  modes: { Explore-AlfaLaval: 0 }
+  reason: "카드·입력 직각(0). 버튼 pill(120px)은 컴포넌트 수정이 필요해 이번 모드에는 넣지 않음"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: component-primitives
+  variable: Border-radius/br-4
+  modes: { Explore-AlfaLaval: 0 }
+  reason: "카드·입력 직각(0). 버튼 pill(120px)은 컴포넌트 수정이 필요해 이번 모드에는 넣지 않음"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: component-primitives
+  variable: Border-radius/br-6
+  modes: { Explore-AlfaLaval: 0 }
+  reason: "카드·입력 직각(0). 버튼 pill(120px)은 컴포넌트 수정이 필요해 이번 모드에는 넣지 않음"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: component-primitives
+  variable: Border-radius/br-8
+  modes: { Explore-AlfaLaval: 0 }
+  reason: "카드·입력 직각(0). 버튼 pill(120px)은 컴포넌트 수정이 필요해 이번 모드에는 넣지 않음"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: component-primitives
+  variable: Border-radius/br-12
+  modes: { Explore-AlfaLaval: 0 }
+  reason: "카드·입력 직각(0). 버튼 pill(120px)은 컴포넌트 수정이 필요해 이번 모드에는 넣지 않음"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: component-primitives
+  variable: Border-radius/br-16
+  modes: { Explore-AlfaLaval: 0 }
+  reason: "카드·입력 직각(0). 버튼 pill(120px)은 컴포넌트 수정이 필요해 이번 모드에는 넣지 않음"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: component-primitives
+  variable: Border-radius/br-24
+  modes: { Explore-AlfaLaval: 0 }
+  reason: "카드·입력 직각(0). 버튼 pill(120px)은 컴포넌트 수정이 필요해 이번 모드에는 넣지 않음"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md

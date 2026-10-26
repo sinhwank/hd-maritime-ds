@@ -23,6 +23,25 @@
       "folder": "Design System",
       "basedOn": "icons"
     },
+    "exploration": {
+      "key": "XXaTjmBNYWuugrWt3l8GRq",
+      "name": "HD-MDS Explore",
+      "folder": "Design System",
+      "basedOn": "core-6.1",
+      "note": "스타일 방향 탐색 전용. publish 허용(Test Board 비교용). 결정 기록 아님 — 값은 tokens/explorations/, 확정되면 tokens/overrides로 옮겨 HD-MDS Library에 적용.",
+      "modes": {
+        "Color-primitives-day": [
+          "Explore-Pleos",
+          "Explore-Kongsberg",
+          "Explore-AlfaLaval"
+        ],
+        "component-primitives": [
+          "Explore-Pleos",
+          "Explore-Kongsberg",
+          "Explore-AlfaLaval"
+        ]
+      }
+    },
     "testBoard": {
       "key": "tRJnqDtLtS8zg1bTPUeVfZ",
       "name": "Test Board",
@@ -120,5 +139,10 @@
         "name": "HD-MDS · 04 Products"
       }
     }
+  },
+  "research": {
+    "key": "dIqDlbv8wWnv423lO4kWlM",
+    "name": "사전 리서치",
+    "note": "읽기 전용 참고 자료 (자동차 DS·EGGS·HD 브랜드 분석)"
   }
 }

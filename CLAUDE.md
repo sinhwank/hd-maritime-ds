@@ -13,6 +13,7 @@ HD현대 선박 통합 솔루션(SDV 플랫폼)의 디자인 시스템과 대표
 - `Source_Open Bridge`: OpenBridge 원본 12개. 수정 금지.
 - `Design System`: HD-MDS Library, HD-MDS Icon Pack — OpenBridge 6.1 복제본을 HD에 맞게 수정해 가는 라이브러리.
 - `Key Screen`: Test Board — 디자인 시스템으로 주요 화면을 테스트하는 곳.
+- `Design System`: HD-MDS Explore — 스타일 방향 탐색 전용 라이브러리. 방향은 원시 컬렉션의 `Explore-*` 모드로 둡니다. **예외적으로 미승인 값의 publish를 허용**합니다(Test Board 비교용). 값은 `tokens/explorations/`에 기록하고, 확정된 방향만 `tokens/overrides`로 옮겨 HD-MDS Library에 적용합니다.
 - `figma.config.json`의 `legacy` 파일(HD-MDS · 00~04)은 사용하지 않습니다.
 
 ## 절대 규칙

@@ -1,0 +1,13 @@
+# 큰 글씨·큰 숫자 = HD현대체, 본문 = Noto Sans (사용자 지시, 2026-10-26). 모든 탐색 방향 공통.
+# Figma: HD-MDS Explore의 .typography-primitives에 font-family/Display 추가, 22px 이상 텍스트 스타일 17개의 fontFamily를 이 변수에 연결.
+#   대상: UI/Title, UI/Subtitle, Instrument/Value-m-*, Instrument/Value-enhanced-*, Automation/Value-enhanced(-off), Generic-BETA/m·l·xl-*
+#   굵기: 원래 Regular·Display Regular → Medium, SemiBold·Bold → Bold (HD현대체는 Light·Medium·Bold 3종).
+#   이 스타일들은 fontWeight 변수 바인딩을 해제했다(HD현대체 정적 서체에 370·570·670 같은 중간 굵기가 없음).
+# 서체 파일은 pxd 조직 Shared fonts에 등록되어 있어야 한다 (패밀리 이름 "HDHyundai OTF").
+- collection: .typography-primitives
+  variable: font-family/Display
+  type: STRING
+  modes: { Regular: "HDHyundai OTF", Medium: "HDHyundai OTF", Large: "HDHyundai OTF" }
+  reason: "22px 이상 큰 글씨·숫자 전용 서체. Pleos도 헤드라인을 48~60px ExtraBold/Bold로 따로 운용(foundations/typography)"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md

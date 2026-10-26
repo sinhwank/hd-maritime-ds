@@ -1,0 +1,283 @@
+# 탐색 방향: Pleos Connect (현대차그룹 SDV 인포테인먼트)
+# HD-MDS Explore 파일 전용 (figma.config.json → files.exploration). hd-tokens-apply 적용 대상이 아님.
+# Figma 모드: Color-primitives-day / component-primitives 의 "Explore-Pleos"
+# 생성: node scripts/explore-ramp.mjs --yaml (OB 램프 명도 유지, 색상·채도만 교체)
+# 출처: document.pleos.ai › docs-design › foundations/colors(Grayscale basic_00~900), components/actions/basic-button(버튼 색·크기 도해), foundations/shadow, foundations/typography (2026-10-26 확인) + 리서치 파일 401:2
+# 신뢰도: 실측(공식 가이드 값)
+# 경보(Alarm·Warning·Caution·Running·Critical-alarm·Notification)와 매질 색상 램프는 OB 원본 그대로 둔다.
+- collection: Color-primitives-day
+  variable: Primitives-day/Surface/100
+  modes: { Explore-Pleos: "#fcfcfd" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Surface/200
+  modes: { Explore-Pleos: "#f6f7f9" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Surface/300
+  modes: { Explore-Pleos: "#eff0f4" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Surface/400
+  modes: { Explore-Pleos: "#dfe0e5" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Surface/000
+  modes: { Explore-Pleos: "#ffffff" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/100
+  modes: { Explore-Pleos: "#dcdde2" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/150
+  modes: { Explore-Pleos: "#cbcdd2" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/200
+  modes: { Explore-Pleos: "#bcbec4" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/250
+  modes: { Explore-Pleos: "#a3a7ad" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/300
+  modes: { Explore-Pleos: "#8b8e95" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/350
+  modes: { Explore-Pleos: "#7b7e85" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/400
+  modes: { Explore-Pleos: "#6e7078" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/450
+  modes: { Explore-Pleos: "#5e6068" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/500
+  modes: { Explore-Pleos: "#51535b" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/550
+  modes: { Explore-Pleos: "#45474f" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/600
+  modes: { Explore-Pleos: "#3b3d43" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/650
+  modes: { Explore-Pleos: "#2f3034" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/700
+  modes: { Explore-Pleos: "#1e1f22" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/1000
+  modes: { Explore-Pleos: "#191a1d" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/000
+  modes: { Explore-Pleos: "#ffffff" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/010
+  modes: { Explore-Pleos: "#fcfcfd" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/030
+  modes: { Explore-Pleos: "#f6f7f9" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Neutral/050
+  modes: { Explore-Pleos: "#eff0f4" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/100
+  modes: { Explore-Pleos: "#d9dce6" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/150
+  modes: { Explore-Pleos: "#c8ccda" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/200
+  modes: { Explore-Pleos: "#b9becf" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/250
+  modes: { Explore-Pleos: "#a0a6bc" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/300
+  modes: { Explore-Pleos: "#868da4" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/350
+  modes: { Explore-Pleos: "#777e95" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/400
+  modes: { Explore-Pleos: "#697085" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/450
+  modes: { Explore-Pleos: "#595f73" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/500
+  modes: { Explore-Pleos: "#4e5365" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/550
+  modes: { Explore-Pleos: "#434858" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/600
+  modes: { Explore-Pleos: "#373c4a" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/650
+  modes: { Explore-Pleos: "#2b2f3a" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/700
+  modes: { Explore-Pleos: "#1d1f28" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/050
+  modes: { Explore-Pleos: "#ebedf2" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Base/Blue
+  modes: { Explore-Pleos: "#7d849b" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: Color-primitives-day
+  variable: Primitives-day/Blue/050-tint
+  modes: { Explore-Pleos: "#626e971c" }
+  reason: "공식 Grayscale(#F7F8FA~#131417, H≈275)을 OB 명도 단계에 보간. 강조 램프도 거의 무채색 슬레이트 — Pleos filled 버튼은 파랑이 아니라 basic_600 #44464E"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: component-primitives
+  variable: Border-radius/br-2
+  modes: { Explore-Pleos: 4 }
+  reason: "Basic button 모서리 ≈ 높이의 1/3 (basic_size 도해) — 버튼·입력 8~16, 플로팅 24"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: component-primitives
+  variable: Border-radius/br-4
+  modes: { Explore-Pleos: 8 }
+  reason: "Basic button 모서리 ≈ 높이의 1/3 (basic_size 도해) — 버튼·입력 8~16, 플로팅 24"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: component-primitives
+  variable: Border-radius/br-6
+  modes: { Explore-Pleos: 16 }
+  reason: "Basic button 모서리 ≈ 높이의 1/3 (basic_size 도해) — 버튼·입력 8~16, 플로팅 24"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: component-primitives
+  variable: Border-radius/br-8
+  modes: { Explore-Pleos: 16 }
+  reason: "Basic button 모서리 ≈ 높이의 1/3 (basic_size 도해) — 버튼·입력 8~16, 플로팅 24"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: component-primitives
+  variable: Border-radius/br-12
+  modes: { Explore-Pleos: 24 }
+  reason: "Basic button 모서리 ≈ 높이의 1/3 (basic_size 도해) — 버튼·입력 8~16, 플로팅 24"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: component-primitives
+  variable: Border-radius/br-16
+  modes: { Explore-Pleos: 24 }
+  reason: "Basic button 모서리 ≈ 높이의 1/3 (basic_size 도해) — 버튼·입력 8~16, 플로팅 24"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
+- collection: component-primitives
+  variable: Border-radius/br-24
+  modes: { Explore-Pleos: 32 }
+  reason: "Basic button 모서리 ≈ 높이의 1/3 (basic_size 도해) — 버튼·입력 8~16, 플로팅 24"
+  status: proposed
+  ref: knowledge/explorations/style-directions.md
