@@ -121,3 +121,19 @@ Figma: Test Board › `기획 · Hi-INS`(와이어프레임 + 기획 의도) →
 - 실제 브리지 사용(장갑, 진동, 거리 1m)에서 터치 타깃·글자 크기가 충분한가
 - Pleos 무채색 강조가 계기·데이터 판독을 해치지 않는가
 - Kongsberg 밀도가 Day 테마 대형 화면(오버헤드 디스플레이)에서도 읽히는가
+
+## 6. 제작 결과와 발견 사항 (2026-10-26)
+
+Figma Test Board › `디자인 · Hi-INS` — 행 ECDIS·BAMS·CID × 열 Pleos·Kongsberg·Alfa Laval, 전부 HD-MDS Explore 인스턴스. 프레임마다 `Color-primitives-day`·`component-primitives`는 해당 `Explore-*` 모드, `Component-size`는 Pleos=Large · Kongsberg=Regular · Alfa Laval=Medium.
+미리보기: `hi-ins-designs-overview.png`
+
+### OB 원본 결함 (HD-MDS Library에도 그대로 있음 → 수정 제안)
+- `Generic-BETA/*` 텍스트 스타일 전체: Component-size **Medium·Large·XL에서 글자 크기가 0**으로 풀림 (Regular에서만 정상).
+- `UI/Title`: **XL에서 0**.
+- 크기 모드를 바꿔도 안전한 스타일: `Instrument/Value-enhanced`(32→40→64→80), `Instrument/Value-m`(24→32→48→56), `UI/Body`·`UI/Label`.
+- 제안: tokens/overrides로 해당 font-size 변수의 빈 모드 값을 채운다(값은 Regular 비율로 산출) — 승인 필요.
+
+### 남은 일
+- 경보 표(K-BAMS) 2~9행의 등급 아이콘이 Alarm 아이콘으로 남아 있음 → HD-MDS Icon Pack publish·연결 후 Warning·Caution IEC 아이콘으로 교체.
+- GNB·도구 레일 아이콘이 자리표시자 → 같은 이유.
+- 매우 큰 숫자(Pleos 속도 112px급) 스타일이 OB에 없음 → `Instrument/Value-display` 같은 추가 스타일 제안(tokens/additions).
