@@ -11,7 +11,7 @@
 
 | | Pleos Connect | Kongsberg (EGGS 작업) | Alfa Laval (EGGS · Bricks) |
 |---|---|---|---|
-| 근거 | 공식 디자인 가이드 document.pleos.ai (foundations/colors·typography·shadow, basic-button) | EGGS 케이스 이미지: EcoAdvisor, K-Sim ECDIS | `@alds/bricks` 0.2.1 npm 토큰 + EGGS HMI 케이스 |
+| 근거 | 공식 디자인 가이드 document.pleos.ai + Figma "Pleos_Connect_design_assets_215"(YjGoaXufszZ2PbCGWFcM9v)·"Pleos_Connect_display_guide_215"(NW4L2G81BMU7x0dwnBpFA4) | EGGS 케이스 이미지: EcoAdvisor, K-Sim ECDIS | `@alds/bricks` 0.2.1 npm 토큰 + EGGS HMI 케이스 |
 | 신뢰도 | **실측** | **추정** (공개 DS 없음) | **실측**(웹) + 추정(HMI) |
 | 중립색 | 차가운 슬레이트 Grayscale 11단계 #FFFFFF·#F7F8FA·#EDEEF2·#E0E1E6·#C7C9CE·#A4A8AE·#686A72·#44464E·#313236·#1D1E21·#131417 (H≈275, 낮은 채도) | 청회색 강철 톤. 배경 #121214, 패널 #2D3037, 경계 #4C5058 (화면 샘플) | 순수 무채색 Steal 90/70/55/15/05 = #1A1A1A·#4D4D4D·#737373·#D9D9D9·#F2F2F2 |
 | 강조·조작 | **무채색 강조** — filled 버튼 basic_600 #44464E, 눌림 basic_700. 파랑은 링크·내비게이션에만 | 시안-틸·그린 링 지표가 유일한 강조 | 짙은 네이비 Water 100 #10387F (hover #1B4EA9, active #00266A), 보조 강조 Sun #FDCC61 |
@@ -20,6 +20,14 @@
 | 타이포 | Asta Sans. Headline 60/80·56/72·48/64 ExtraBold·Bold. 최소 12px, 줄 높이 1.5배 | 작은 라벨 + 큰 링 수치 | Roboto(웹), 0.75~4.5rem 11단계, 행간 1.15~1.5 |
 | 밀도 | 낮음(주행 중 1~2초 판독) | 높음(한 화면에 전부, 전문가용) | 중간. 간격 4px 단위 |
 | 테마 | Light·Dark 쌍을 토큰 이름으로 연결 | 다크 위주 | HMI Light·Dark를 같은 컴포넌트로 |
+
+### Pleos 공식 Figma에서 추가 확인 (2026-10-26)
+- 타입 스케일: Headline 60/56/48, Title 40/36/32, Body 30/28/26, Label 24/20, Driving View Speed **112/134**, 최소 높이 18px
+- 버튼 높이 64·80·100·108px, 모서리 r16·r20·r32(≈ 높이의 1/4~1/3), 팝업 r40~48, 버튼 그림자 Y8 B32 16% + Y2 B2 8%, 알림 그림자 Y20 B40 24% + Y2 B4 20%
+- 시맨틱: surface_basic=basic_00, surface_low=basic_50, background_primary=basic_50, text 4단(static_dark 100/84/64/32%)
+- Informative(상태 의미) #02C265 active · #0064FF positive · #FE3D16 negative · #5A46FA autonomous — **법규용 Regulation 색(red·orange·yellow·green·blue)을 별도로 분리**한다. HD의 "경보 색은 경보에만" 규칙과 같은 구조라 참고할 만함
+- 가로 화면: 운전 보조(Driving view) : 앱 = **1:2**. 1920×1080(Connect-L 12.9")도 공식 폼팩터
+- 시사점: Pleos의 차이는 색보다 **크기·밀도**. 비교 화면에서는 OB `Component-size` XL 모드를 함께 적용한다.
 
 ## 2. OB 변수 매핑 (원시값만 교체, Palette alias 유지)
 

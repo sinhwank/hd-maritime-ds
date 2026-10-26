@@ -144,5 +144,17 @@
     "key": "dIqDlbv8wWnv423lO4kWlM",
     "name": "사전 리서치",
     "note": "읽기 전용 참고 자료 (자동차 DS·EGGS·HD 브랜드 분석)"
+  },
+  "reference": {
+    "pleos-assets": {
+      "key": "YjGoaXufszZ2PbCGWFcM9v",
+      "name": "Pleos_Connect_design_assets_215",
+      "note": "읽기 전용 참고"
+    },
+    "pleos-display": {
+      "key": "NW4L2G81BMU7x0dwnBpFA4",
+      "name": "Pleos_Connect_display_guide_215",
+      "note": "읽기 전용 참고"
+    }
   }
 }
