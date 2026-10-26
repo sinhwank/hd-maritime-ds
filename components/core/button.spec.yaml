@@ -1,0 +1,29 @@
+id: button
+name: Button
+layer: core
+status: draft
+origin:
+  source: openbridge/components/button
+  decision: adapt
+  notes: OpenBridge 구조 유지, 시각 언어는 HD 아이덴티티로 재정의
+description: 화면 내 동작을 실행하는 기본 버튼.
+anatomy: [container, icon-leading, label, icon-trailing]
+props:
+  variant: [primary, secondary, ghost]
+  size: [md, lg]          # lg = 터치 디스플레이(브리지) 기본
+  interaction: [default, hover, pressed, focused, disabled]
+  icon-leading: { type: boolean, default: false }
+  label: { type: text, default: Button }
+theming: variables
+tokens:
+  container.fill: "fill.brand.default"
+  label.color: "fg.onBrand"
+  focus.ring: "border.focus"
+sizes:
+  md: { height: 40, paddingX: 16 }
+  lg: { height: 48, paddingX: 20 }
+rules:
+  - "터치 환경 최소 타깃 48px (size=lg)"
+  - "night 테마에서 primary fill은 휘도 제한 토큰 사용"
+dos: ["한 영역에 primary 1개"]
+donts: ["경보 색을 버튼 fill로 사용"]

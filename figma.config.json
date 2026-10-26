@@ -1,0 +1,11 @@
+{
+  "plan": "organization::1313295325693506418",
+  "files": {
+    "foundation": { "key": "cjp2cR8Mc6ogRiGHGzvony", "name": "HD-MDS · 00 Foundation" },
+    "core":       { "key": "fLnct9qamaMT4kCTQwIQyW", "name": "HD-MDS · 01 Core UI" },
+    "maritime":   { "key": "G2HogeEa0kg9OmWKmCrPdW", "name": "HD-MDS · 02 Maritime UI" },
+    "patterns":   { "key": "dOiNvMS6gjcj7KYHX9Qlzu", "name": "HD-MDS · 03 Patterns" },
+    "products":   { "key": "W70NjEuTMHnfKqtk6LRVAi", "name": "HD-MDS · 04 Products" }
+  },
+  "componentFileByLayer": { "core": "core", "maritime": "maritime" }
+}

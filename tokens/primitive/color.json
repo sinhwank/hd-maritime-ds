@@ -1,0 +1,24 @@
+{
+  "$description": "DRAFT — 브랜드 확정 전 임시값. 사람 승인 없이 변경 금지.",
+  "color": {
+    "$type": "color",
+    "neutral": {
+      "0":   { "$value": "#FFFFFF" },
+      "50":  { "$value": "#F4F6F8" },
+      "100": { "$value": "#E6EAEE" },
+      "300": { "$value": "#AEB7C0" },
+      "500": { "$value": "#6B7682" },
+      "700": { "$value": "#3A434C" },
+      "800": { "$value": "#242B32" },
+      "900": { "$value": "#14191E" },
+      "950": { "$value": "#0A0D10" }
+    },
+    "brand": {
+      "500": { "$value": "#00A859", "$description": "임시: HD 그린 계열. 아이덴티티 확정 후 교체" }
+    },
+    "red":    { "500": { "$value": "#E5322D" } },
+    "amber":  { "500": { "$value": "#F5A300" } },
+    "yellow": { "500": { "$value": "#F2D600" } },
+    "cyan":   { "500": { "$value": "#1FB6D9" } }
+  }
+}

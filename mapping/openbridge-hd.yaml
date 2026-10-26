@@ -1,0 +1,15 @@
+# OpenBridge 6.1 → HD 적용성 매핑. ob-mapper 스킬이 초안 작성, 사람이 decision 확정.
+# decision: adopt(그대로) | adapt(구조 유지·시각 변경) | extend(HD 확장) | exclude(제외)
+version: openbridge-6.1
+license_checked: false
+items:
+  - ob: components/button
+    hd: button
+    decision: adapt
+    reason: 구조 유지, HD 아이덴티티 적용
+    seen_in: []             # 기존 HD 화면 인벤토리 id (knowledge/products/)
+  - ob: automation/valve
+    hd: valve
+    decision: adapt
+    reason: HiCONiS 심볼과 대조 필요
+    seen_in: []

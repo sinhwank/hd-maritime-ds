@@ -1,0 +1,15 @@
+# 호선별 구성 템플릿. 실제 호선 파일은 고객 승인 전까지 _private/에 둔다.
+hull: "XXXX"
+ship_type: "e.g. 93K DF VLAC"
+fuels: [VLSFO, MGO, LNG]          # 연료 종류에 따라 표시 화면이 달라짐
+equipment:
+  main_engine: { count: 1, maker: TBD }
+  generator_engine: { count: 3, maker: TBD }
+  boiler: { count: 1 }
+systems:
+  - id: fuel-gas-supply
+    lines:
+      - { id: FG-01, medium: fuelGas, from: tank-1, to: me-1, valves: [FV-101, FV-102] }
+tags:
+  # 제조사별 태그명 → 표준명 매핑 (ISS 현장 이슈: 태그 불일치)
+  "ME1_RPM": main_engine.1.rpm

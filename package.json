@@ -1,0 +1,13 @@
+{
+  "name": "hd-maritime-ds",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "tokens:plan": "node scripts/tokens-plan.mjs"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "yaml": "^2.6.1"
+  }
+}

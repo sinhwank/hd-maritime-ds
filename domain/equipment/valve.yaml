@@ -1,0 +1,11 @@
+# 장비 온톨로지: 밸브. mimic-generate가 이 정의로 심볼과 상태를 결정한다.
+id: valve
+component: valve
+signals:
+  - { id: position, type: enum, values: [open, closed, intermediate] }
+  - { id: fault, type: bool }
+  - { id: comm, type: enum, values: [ok, lost] }
+  - { id: command, type: enum, values: [open, close, none] }
+derive:
+  status: "comm == lost ? comm-loss : fault ? fault : position"
+controllable_when: "control == remote"

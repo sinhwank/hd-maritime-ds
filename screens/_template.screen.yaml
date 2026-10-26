@@ -1,0 +1,21 @@
+id: eng-03-fuel-gas
+title: 연료가스 공급 계통
+domain: engine-automation
+status: draft
+roles: [engineer]
+scenario: 항해 중 연료가스 압력 이상 감지 → 원인 확인 → 대응
+context:
+  operationMode: [sea-passage]
+  risk: elevated
+  aiAgent: true
+display:
+  target: mfd
+  resolution: 1920x1080
+  input: mixed
+  themes: [day, night]
+modules:
+  - { id: global-bar, region: top, components: [alarm-summary, nav-tabs] }
+  - { id: mimic, region: main, components: [valve, pump, pipe], data: [systems.fuel-gas-supply] }
+  - { id: ai-brief, region: side, components: [agent-card], notes: "감지→분석→근거·대응안→승인" }
+states: [normal, alarm-active, comm-loss]
+refs: [knowledge/research/insights.md]

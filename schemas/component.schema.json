@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HD-MDS component spec",
+  "type": "object",
+  "required": ["id", "layer", "status", "origin", "description", "props", "theming"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+    "name": { "type": "string" },
+    "layer": { "enum": ["core", "maritime"] },
+    "status": { "enum": ["draft", "review", "approved", "deprecated"] },
+    "origin": {
+      "type": "object",
+      "required": ["decision"],
+      "properties": {
+        "source": { "type": "string", "description": "예: openbridge/automation/valve" },
+        "decision": { "enum": ["adopt", "adapt", "extend", "hd-new"] },
+        "notes": { "type": "string" }
+      }
+    },
+    "description": { "type": "string" },
+    "refs": { "type": "array", "items": { "type": "string" }, "description": "knowledge/ 문서나 표준 조항 id" },
+    "anatomy": { "type": "array", "items": { "type": "string" } },
+    "props": {
+      "type": "object",
+      "description": "variant 축. 테마는 여기 넣지 않음(Variable mode).",
+      "not": { "required": ["theme"] },
+      "additionalProperties": {
+        "oneOf": [
+          { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          { "type": "object", "required": ["type"], "properties": { "type": { "enum": ["boolean", "text", "instance-swap"] }, "default": {} } }
+        ]
+      }
+    },
+    "excludeCombinations": { "type": "array", "items": { "type": "object" }, "description": "의미 없는 variant 조합 제외" },
+    "theming": { "const": "variables" },
+    "tokens": { "type": "object", "additionalProperties": { "type": "string" } },
+    "sizes": { "type": "object" },
+    "rules": { "type": "array", "items": { "type": "string" } },
+    "dos": { "type": "array", "items": { "type": "string" } },
+    "donts": { "type": "array", "items": { "type": "string" } }
+  }
+}
