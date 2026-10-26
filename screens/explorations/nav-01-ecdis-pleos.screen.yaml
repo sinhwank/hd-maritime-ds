@@ -51,7 +51,7 @@ modules:
   region: bottom
   components:
   - Navigation Item
-  notes: 하단 고정·큰 터치 타깃
+  notes: '하단 고정·큰 터치 타깃 항목: 해도·항로·타선·계기·경보 (세 화면 공통, 레이어는 해도 도구로)'
 states:
 - normal
 - alarm-cpa

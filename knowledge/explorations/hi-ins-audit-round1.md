@@ -32,3 +32,8 @@
 
 ### 수정 지시 (builder 1회차)
 공통 C1~C10, 방향별 P1~P8 / K1~K10 / A0~A8 — 원문은 `knowledge/explorations/harness/`. 차단: Icon Pack 미연결(IEC 등급 아이콘·마름모 아이콘), 상태 파생 프레임은 다음 단계.
+
+### builder 1회차 결과 — Pleos (완료)
+- 고침: C1~C8, C10, P1~P8 대부분. 간격 변수 바인딩(4 px 간격은 대응 변수가 없어 0으로).
+- 못 고침(차단): **러더 바늘·바람 화살표 각도** — 인스턴스에 각도 속성이 없고 내부 회전 오버라이드가 Figma에서 금지됨 → HD-MDS Explore(→ Library)의 Rudder·Wind 컴포넌트에 Angle variant 또는 rotator 추가 필요(ds-component-build 대상, 승인 필요). 나침반은 Angle variant가 5° 단위라 ±1~1.5° 오차.
+- builder 질문에 대한 결정(스펙 반영): BAMS Caution·확인됨 행 내용, 피치 STBD 62 %, 바람 다이얼 North-up 유지, GNB 5항목 통일(해도·항로·타선·계기·경보), CID는 22:52 변침 장면으로 분리(CPA 해소, 미확인 Warning 2 + Caution 1).

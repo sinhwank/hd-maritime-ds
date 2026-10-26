@@ -6,7 +6,7 @@ status: draft
 roles:
 - navigator
 scenario: '22:38 미확인: Alarm 1(CPA/TCPA, ECDIS1, Cat A — BAMS에서는 Silence만, ACK는 ECDIS), Warning 2(Backup GYRO·SOG 실패, RADAR1, Cat B). Caution 3(GNSS2 신호 없음 등 — ACK 대상 아님). 확인됨 다수. 소리 ON. 서버 Primary Active
-  / Secondary Standby.'
+  / Secondary Standby. Caution 3: GNSS2 신호 없음 · Approach to CRIT PNT(WP3, ECDIS1) · 수심 20 m 미만(Echo sounder). 확인됨 예시: COG 신호 복구(GNSS1), BNWAS 이관(BNWAS).'
 context:
   operationMode:
   - sea-passage
@@ -45,7 +45,7 @@ modules:
   region: bottom
   components:
   - Navigation Item
-  notes: 같은 GNB
+  notes: '같은 GNB 항목: 해도·항로·타선·계기·경보 (세 화면 공통, 레이어는 해도 도구로)'
 states:
 - alarm-active
 - silenced

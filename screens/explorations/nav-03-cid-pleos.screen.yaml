@@ -5,7 +5,8 @@ domain: navigation
 status: draft
 roles:
 - navigator
-scenario: '22:38 트랙 제어 중 변침: HDG 241°, ROT −12°/min(좌선회), 러더 PORT 15°, 상대풍 20.4 kn·078°(Caution: 횡풍 20 kn 초과), 수심 18.0 m · UKC 6.5 m. 미확인 Alarm 1(CPA/TCPA Cat A).'
+scenario: '22:52 WP3 변침 중(트랙 제어): HDG 241°→198°, ROT −12°/min(좌선회), 러더 PORT 15°, 피치 PORT/STBD 62 %, RPM 86/86, SOG 12.4 kn, XTD 0.06 NM STBD, 상대풍 20.4 kn·078°(North-up 다이얼에서 진풍향 319°; Caution: 횡풍 20 kn
+  초과), 수심 18.0 m · UKC 6.5 m. CPA/TCPA 경보는 22:46 해소. 미확인: Warning 2(Backup GYRO·SOG) + Caution 1(횡풍).'
 context:
   operationMode:
   - maneuvering
@@ -44,7 +45,7 @@ modules:
   components:
   - Toggle button item
   - Navigation Item
-  notes: 오토파일럿 모드 상시 표시, 조작은 하단
+  notes: '오토파일럿 모드 상시 표시, 조작은 하단 항목: 해도·항로·타선·계기·경보 (세 화면 공통, 레이어는 해도 도구로)'
 states:
 - normal
 - caution-wind
