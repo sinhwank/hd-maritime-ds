@@ -7,6 +7,12 @@ HD현대 선박 통합 솔루션(SDV 플랫폼)의 디자인 시스템과 대표
 1. 이 레포의 스펙(`tokens/`, `components/`, `screens/`, `domain/`)이 기준이고, Figma는 결과물입니다.
 2. Figma에서 발견한 차이는 Figma를 고치거나, 스펙 변경을 **제안**합니다. 스펙을 몰래 Figma에 맞추지 않습니다.
 3. 파일 키는 `figma.config.json`에서 읽습니다. 하드코딩 금지.
+4. **OpenBridge 원본(`figma.config.json` → `openbridge.files`)은 읽기 전용입니다.** `use_figma`로 쓰기 금지. 구조 요약은 `knowledge/openbridge/README.md`.
+
+## Figma 폴더 (`99. 클로드테스트`)
+- `Source_Open Bridge`: OpenBridge 원본 12개. 수정 금지.
+- `Design System`: OpenBridge를 기반으로 HD에 맞게 수정해 가는 라이브러리.
+- `Key Screen`: 디자인 시스템으로 주요 화면을 테스트하는 곳.
 
 ## 절대 규칙
 - 색·간격·반경·타이포는 **반드시 Variable/토큰 바인딩**. 하드코딩 hex 금지.

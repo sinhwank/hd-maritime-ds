@@ -1,12 +1,93 @@
 {
   "plan": "organization::1313295325693506418",
-  "project": { "id": "677798024", "url": "https://www.figma.com/files/1313295325693506418/folder/677798024" },
-  "files": {
-    "foundation": { "key": "cjp2cR8Mc6ogRiGHGzvony", "name": "HD-MDS · 00 Foundation" },
-    "core":       { "key": "fLnct9qamaMT4kCTQwIQyW", "name": "HD-MDS · 01 Core UI" },
-    "maritime":   { "key": "G2HogeEa0kg9OmWKmCrPdW", "name": "HD-MDS · 02 Maritime UI" },
-    "patterns":   { "key": "dOiNvMS6gjcj7KYHX9Qlzu", "name": "HD-MDS · 03 Patterns" },
-    "products":   { "key": "W70NjEuTMHnfKqtk6LRVAi", "name": "HD-MDS · 04 Products" }
+  "project": {
+    "id": "677798024",
+    "name": "99. 클로드테스트",
+    "url": "https://www.figma.com/files/1313295325693506418/folder/677798024",
+    "subfolders": [
+      "Source_Open Bridge",
+      "Design System",
+      "Key Screen"
+    ]
   },
-  "componentFileByLayer": { "core": "core", "maritime": "maritime" }
+  "openbridge": {
+    "readOnly": true,
+    "note": "원본. 절대 수정하지 않는다. 읽기·참조만.",
+    "files": {
+      "core-6.1": {
+        "key": "n5cAPlwmWlpTfY1NvDtkR5",
+        "name": "1. OpenBridge 6.1"
+      },
+      "icons": {
+        "key": "RwwI7uBq4MtDBsZrsc4lwI",
+        "name": "1. OpenBridge Icon Pack"
+      },
+      "install-guide": {
+        "key": "9Zh5h0QLrnpQpseOI1zFeT",
+        "name": "1. OpenBridge 6.1 Installation Guide & Toolkit"
+      },
+      "alerts": {
+        "key": "VRRdDZFheA7MZD7q9ivn5n",
+        "name": "OpenBridge Alerts"
+      },
+      "automation": {
+        "key": "OFIHVjprtlGmF8EMG3Twko",
+        "name": "OpenBridge Automation"
+      },
+      "instruments": {
+        "key": "V6pwRZevESSa4tia8g0eLt",
+        "name": "OpenBridge Instruments"
+      },
+      "advice-system": {
+        "key": "dwgJrOFk0ngQsIAtN6OZVE",
+        "name": "OpenBridge Advice System"
+      },
+      "integration-6.0": {
+        "key": "3GsyeZaFS5pote4mk2aHUv",
+        "name": "OpenBridge 6.0 Integration System"
+      },
+      "small-screens": {
+        "key": "2uRgPMDFjbAvWK7RXY8AYu",
+        "name": "OpenBridge Small Screens"
+      },
+      "ar-framework": {
+        "key": "kXwXKxtaOlVYKR98TfIHzS",
+        "name": "OpenBridge 6.1 AR framework"
+      },
+      "video-camera": {
+        "key": "CvIyQ3vBQONVpp3phlVkcv",
+        "name": "OpenBridge 6.1 Video and Camera"
+      },
+      "wind-propulsion": {
+        "key": "U8HAvWjXnLDRAPK8zJEjhO",
+        "name": "OpenBridge 6.1 Wind-Assisted Propulsion"
+      }
+    }
+  },
+  "files": {
+    "foundation": {
+      "key": "cjp2cR8Mc6ogRiGHGzvony",
+      "name": "HD-MDS · 00 Foundation"
+    },
+    "core": {
+      "key": "fLnct9qamaMT4kCTQwIQyW",
+      "name": "HD-MDS · 01 Core UI"
+    },
+    "maritime": {
+      "key": "G2HogeEa0kg9OmWKmCrPdW",
+      "name": "HD-MDS · 02 Maritime UI"
+    },
+    "patterns": {
+      "key": "dOiNvMS6gjcj7KYHX9Qlzu",
+      "name": "HD-MDS · 03 Patterns"
+    },
+    "products": {
+      "key": "W70NjEuTMHnfKqtk6LRVAi",
+      "name": "HD-MDS · 04 Products"
+    }
+  },
+  "componentFileByLayer": {
+    "core": "core",
+    "maritime": "maritime"
+  }
 }
