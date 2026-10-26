@@ -20,7 +20,7 @@ Figma 폴더 `99. 클로드테스트 / Source_Open Bridge`에 있는 원본 12�
 
 ## 1. OpenBridge 6.1 변수 구조 (요약)
 
-변수 약 4,100개, 텍스트 스타일 48개(Noto Sans), 이펙트 스타일 11개.
+변수 4,519개(18개 컬렉션), 텍스트 스타일 48개(Noto Sans), 이펙트 스타일 11개. 컴포넌트 세트: 02 UI components 103개, 07 Automation 75개.
 
 | 컬렉션 | 모드 | 변수 수 | 메모 |
 |---|---|---|---|
@@ -37,3 +37,6 @@ Figma 폴더 `99. 클로드테스트 / Source_Open Bridge`에 있는 원본 12�
 - 테마 4종(bright·day·dusk·night)과 경보 상태(Running·Caution·Warning·Alarm)가 **이미 Variable mode로 설계**되어 있다 → 처음부터 만들지 말고, 이 구조를 유지한 채 **값(primitive·palette)을 HD 아이덴티티로 교체**하는 방식이 맞다.
 - Dusk·Night·Bright는 아직 BETA → HD에서 확정 필요.
 - Component-size의 4단계 크기 모드는 디스플레이 환경(MFD·오버헤드·콕핏) 대응에 그대로 쓸 수 있다.
+- 경보: `Color/Alert/*`에 Alarm·Warning·Caution·Running과 함께 Low-integrity·Invalid(저신뢰·무효 데이터), inactive, container, tint 변형이 이미 있다.
+- 배관 매질: `Color/Automation/Medium/*` 14종 (Fresh-water, Sea-water, Fuel, Oil, Steam, Flammable-gas, Non-flammable-gas, Fire-fighting, Acid-alkalis, Waste, Air-ventilation, Hot, Cold, Masses) → HiCONiS 매질 색과 대조 대상.
+- 밸브(`Valve two-way`) 상태는 Open·Static·Closed·Opening·Closing만 있고 고장·통신 단절·현장 수동 표현은 없다 → HD 확장 대상.

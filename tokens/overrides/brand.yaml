@@ -1,0 +1,9 @@
+# HD 브랜드 아이덴티티 반영. 아이덴티티 확정 전까지 비워 둔다.
+# 예시 (적용 안 됨):
+# - collection: Color-primitives-day
+#   variable: Primitives-day/Blue/500
+#   modes: { WCAG: "#RRGGBB" }
+#   reason: HD 브랜드 블루로 교체
+#   status: proposed
+#   ref: knowledge/brand/identity.md
+[]

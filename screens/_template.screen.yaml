@@ -13,6 +13,7 @@ display:
   resolution: 1920x1080
   input: mixed
   themes: [day, night]
+  size: regular
 modules:
   - { id: global-bar, region: top, components: [alarm-summary, nav-tabs] }
   - { id: mimic, region: main, components: [valve, pump, pipe], data: [systems.fuel-gas-supply] }

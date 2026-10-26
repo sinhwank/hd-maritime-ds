@@ -12,19 +12,26 @@
     "origin": {
       "type": "object",
       "required": ["decision"],
+      "additionalProperties": false,
       "properties": {
-        "source": { "type": "string", "description": "예: openbridge/automation/valve" },
-        "decision": { "enum": ["adopt", "adapt", "extend", "hd-new"] },
+        "decision": { "enum": ["adopt", "adapt", "extend", "hd-new"], "description": "adopt 그대로 | adapt OB 컴포넌트 수정 | extend OB 컴포넌트에 variant/속성 추가 | hd-new 신규" },
+        "page": { "type": "string", "description": "Library 페이지 (예: 07 Automation)" },
+        "set": { "type": "string", "description": "OB 컴포넌트 세트 이름 (예: Valve two-way)" },
         "notes": { "type": "string" }
       }
     },
     "description": { "type": "string" },
-    "refs": { "type": "array", "items": { "type": "string" }, "description": "knowledge/ 문서나 표준 조항 id" },
+    "refs": { "type": "array", "items": { "type": "string" } },
     "anatomy": { "type": "array", "items": { "type": "string" } },
+    "baseline": {
+      "type": "object",
+      "description": "OpenBridge 원본의 속성 (Figma에서 읽은 그대로, 비교 기준)",
+      "additionalProperties": { "type": ["array", "object", "string"] }
+    },
     "props": {
       "type": "object",
-      "description": "variant 축. 테마는 여기 넣지 않음(Variable mode).",
-      "not": { "required": ["theme"] },
+      "description": "HD 목표 속성. 테마·크기는 Variable mode로 처리하므로 넣지 않는다.",
+      "not": { "anyOf": [{ "required": ["theme"] }, { "required": ["Theme"] }, { "required": ["size-mode"] }] },
       "additionalProperties": {
         "oneOf": [
           { "type": "array", "items": { "type": "string" }, "minItems": 1 },
@@ -32,10 +39,10 @@
         ]
       }
     },
-    "excludeCombinations": { "type": "array", "items": { "type": "object" }, "description": "의미 없는 variant 조합 제외" },
+    "changes": { "type": "array", "items": { "type": "string" }, "description": "baseline 대비 HD 변경 사항 (사람이 읽는 목록)" },
+    "excludeCombinations": { "type": "array", "items": { "type": "object" } },
     "theming": { "const": "variables" },
-    "tokens": { "type": "object", "additionalProperties": { "type": "string" } },
-    "sizes": { "type": "object" },
+    "tokens": { "type": "object", "additionalProperties": { "type": "string" }, "description": "부위 → OB 변수 이름" },
     "rules": { "type": "array", "items": { "type": "string" } },
     "dos": { "type": "array", "items": { "type": "string" } },
     "donts": { "type": "array", "items": { "type": "string" } }

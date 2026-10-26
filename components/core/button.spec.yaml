@@ -3,27 +3,31 @@ name: Button
 layer: core
 status: draft
 origin:
-  source: openbridge/components/button
   decision: adapt
-  notes: OpenBridge 구조 유지, 시각 언어는 HD 아이덴티티로 재정의
+  page: 02 UI components
+  set: Button
+  notes: 구조·상태 체계는 OB 유지. 시각 언어만 HD 아이덴티티로 (토큰 override로 대부분 해결 예상)
 description: 화면 내 동작을 실행하는 기본 버튼.
-anatomy: [container, icon-leading, label, icon-trailing]
+baseline:                       # OB 6.1 원본 (2026-10-26 조회)
+  Type: [Normal, Flat, Raised]
+  State: [Enabled, Hover, Active, Focus, Disabled, Loading]
+  Hug content: ["False", "True"]
+  booleans: [has Leading icon, has Trailing icon, has Focus, has Alert]
+  text: [Button text]
 props:
-  variant: [primary, secondary, ghost]
-  size: [md, lg]          # lg = 터치 디스플레이(브리지) 기본
-  interaction: [default, hover, pressed, focused, disabled]
-  icon-leading: { type: boolean, default: false }
-  label: { type: text, default: Button }
+  Type: [Normal, Flat, Raised]
+  State: [Enabled, Hover, Active, Focus, Disabled, Loading]
+  Hug content: ["False", "True"]
+  has Leading icon: { type: boolean, default: true }
+  has Trailing icon: { type: boolean, default: false }
+  has Alert: { type: boolean, default: false }
+  Button text: { type: text, default: Label }
+changes: []                     # 아이덴티티 확정 후 기록
 theming: variables
 tokens:
-  container.fill: "fill.brand.default"
-  label.color: "fg.onBrand"
-  focus.ring: "border.focus"
-sizes:
-  md: { height: 40, paddingX: 16 }
-  lg: { height: 48, paddingX: 20 }
+  container.fill: Color/Styles/Normal/Enabled-background-color
+  container.border: Color/Styles/Normal/Enabled-border-color
+  label: Color/Styles/On-normal/Active-color
 rules:
-  - "터치 환경 최소 타깃 48px (size=lg)"
-  - "night 테마에서 primary fill은 휘도 제한 토큰 사용"
-dos: ["한 영역에 primary 1개"]
-donts: ["경보 색을 버튼 fill로 사용"]
+  - "터치 디스플레이에서는 Component-size Large 이상 (INP-01)"
+donts: ["경보 색(Color/Alert/*)을 일반 버튼 배경으로 사용"]

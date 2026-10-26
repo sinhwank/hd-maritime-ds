@@ -1,0 +1,6 @@
+# 배관 매질 색: OpenBridge Color/Automation/Medium/* ↔ HiCONiS HMI 필로소피 대조 후 결정.
+# OB 기본값(Day): Fresh-water→Cyan/200, Sea-water→Mint/200, Fuel→Orange/200, Oil→Yellow/200,
+#   Steam→Blue/200, Flammable-gas→Pink/200, Non-flammable-gas→Green/200, Fire-fighting→Red/200,
+#   Acid-alkalis→Purple/200, Waste→Indigo/200, Air-ventilation→Neutral/200, Hot→Red/200, Cold→Cyan/200, Masses→#e2dbd3
+# HiCONiS와 다르면 아래에 항목을 추가한다 (status: proposed → 고객 확인 후 approved).
+[]

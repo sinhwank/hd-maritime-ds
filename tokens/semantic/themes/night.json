@@ -1,6 +1,0 @@
-{
-  "$description": "DRAFT semantic tokens — theme: night. 값은 primitive 참조만 허용.",
-  "bg":     { "$type": "color", "canvas": { "$value": "{color.neutral.950}" }, "surface": { "$value": "{color.neutral.900}" } },
-  "fg":     { "$type": "color", "default": { "$value": "{color.neutral.300}" }, "subtle": { "$value": "{color.neutral.500}" } },
-  "border": { "$type": "color", "default": { "$value": "{color.neutral.700}" } }
-}

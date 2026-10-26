@@ -2,32 +2,135 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "HD-MDS screen spec",
   "type": "object",
-  "required": ["id", "title", "domain", "status", "roles", "context", "display", "modules"],
+  "required": [
+    "id",
+    "title",
+    "domain",
+    "status",
+    "roles",
+    "context",
+    "display",
+    "modules"
+  ],
   "additionalProperties": false,
   "properties": {
-    "id": { "type": "string", "pattern": "^(dash|nav|eng|opt|mgmt)-[0-9]{2}-[a-z0-9-]+$" },
-    "title": { "type": "string" },
-    "domain": { "enum": ["dashboard", "navigation", "engine-automation", "optimization", "management"] },
-    "status": { "enum": ["draft", "review", "approved"] },
-    "roles": { "type": "array", "items": { "enum": ["navigator", "engineer", "shore-operator"] }, "minItems": 1 },
-    "scenario": { "type": "string", "description": "이 화면이 쓰이는 운항 시나리오" },
+    "id": {
+      "type": "string",
+      "pattern": "^(dash|nav|eng|opt|mgmt)-[0-9]{2}-[a-z0-9-]+$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "domain": {
+      "enum": [
+        "dashboard",
+        "navigation",
+        "engine-automation",
+        "optimization",
+        "management"
+      ]
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "review",
+        "approved"
+      ]
+    },
+    "roles": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "navigator",
+          "engineer",
+          "shore-operator"
+        ]
+      },
+      "minItems": 1
+    },
+    "scenario": {
+      "type": "string",
+      "description": "이 화면이 쓰이는 운항 시나리오"
+    },
     "context": {
       "type": "object",
-      "required": ["operationMode"],
+      "required": [
+        "operationMode"
+      ],
       "properties": {
-        "operationMode": { "type": "array", "items": { "enum": ["port", "cargo-handling", "sea-passage", "maneuvering", "anchoring"] } },
-        "risk": { "enum": ["normal", "elevated", "emergency"] },
-        "aiAgent": { "type": "boolean", "description": "AI 에이전트 개입(감지→분석→근거·대응안→승인) 포함 여부" }
+        "operationMode": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "port",
+              "cargo-handling",
+              "sea-passage",
+              "maneuvering",
+              "anchoring"
+            ]
+          }
+        },
+        "risk": {
+          "enum": [
+            "normal",
+            "elevated",
+            "emergency"
+          ]
+        },
+        "aiAgent": {
+          "type": "boolean",
+          "description": "AI 에이전트 개입(감지→분석→근거·대응안→승인) 포함 여부"
+        }
       }
     },
     "display": {
       "type": "object",
-      "required": ["target", "resolution"],
+      "required": [
+        "target",
+        "resolution"
+      ],
       "properties": {
-        "target": { "enum": ["mfd", "overhead", "dt-portal", "cockpit", "shore-web"] },
-        "resolution": { "type": "string", "pattern": "^[0-9]+x[0-9]+$" },
-        "input": { "enum": ["touch", "pointer", "pui", "mixed"] },
-        "themes": { "type": "array", "items": { "enum": ["bright", "day", "dusk", "night"] } }
+        "target": {
+          "enum": [
+            "mfd",
+            "overhead",
+            "dt-portal",
+            "cockpit",
+            "shore-web"
+          ]
+        },
+        "resolution": {
+          "type": "string",
+          "pattern": "^[0-9]+x[0-9]+$"
+        },
+        "input": {
+          "enum": [
+            "touch",
+            "pointer",
+            "pui",
+            "mixed"
+          ]
+        },
+        "themes": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "bright",
+              "day",
+              "dusk",
+              "night"
+            ]
+          }
+        },
+        "size": {
+          "enum": [
+            "regular",
+            "medium",
+            "large",
+            "xl"
+          ],
+          "description": "OB Component-size 모드 (figma.config.json → sizes)"
+        }
       }
     },
     "modules": {
@@ -35,17 +138,50 @@
       "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["id", "region"],
+        "required": [
+          "id",
+          "region"
+        ],
         "properties": {
-          "id": { "type": "string" },
-          "region": { "type": "string", "description": "patterns/의 레이아웃 영역 이름" },
-          "components": { "type": "array", "items": { "type": "string" }, "description": "component spec id" },
-          "data": { "type": "array", "items": { "type": "string" }, "description": "domain/ 장비·신호 참조" },
-          "notes": { "type": "string" }
+          "id": {
+            "type": "string"
+          },
+          "region": {
+            "type": "string",
+            "description": "patterns/의 레이아웃 영역 이름"
+          },
+          "components": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "component spec id"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "domain/ 장비·신호 참조"
+          },
+          "notes": {
+            "type": "string"
+          }
         }
       }
     },
-    "states": { "type": "array", "items": { "type": "string" }, "description": "파생할 상태 화면 (예: alarm-active, comm-loss)" },
-    "refs": { "type": "array", "items": { "type": "string" } }
+    "states": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "파생할 상태 화면 (예: alarm-active, comm-loss)"
+    },
+    "refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
   }
 }

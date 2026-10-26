@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HD-MDS token overrides / additions",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["collection", "variable", "modes", "reason", "status"],
+    "additionalProperties": false,
+    "properties": {
+      "collection": { "type": "string", "description": "OpenBridge 컬렉션 이름 그대로 (예: Palette)" },
+      "variable": { "type": "string", "description": "OpenBridge 변수 이름 그대로 (예: Color/Alert/Alarm-color)" },
+      "type": { "enum": ["COLOR", "FLOAT", "STRING", "BOOLEAN"], "description": "additions에서만 필수" },
+      "modes": {
+        "type": "object",
+        "description": "모드 이름(OB 그대로) → 값. hex, 숫자, 문자열, 또는 {Alias/Name}",
+        "additionalProperties": { "type": ["string", "number", "boolean"] }
+      },
+      "reason": { "type": "string" },
+      "status": { "enum": ["proposed", "approved", "rejected"] },
+      "ref": { "type": "string" }
+    }
+  }
+}

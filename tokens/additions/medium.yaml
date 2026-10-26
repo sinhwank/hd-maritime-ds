@@ -1,0 +1,8 @@
+# OpenBridge에 없는 HD 매질. 값은 HiCONiS 필로소피 확인 후 채운다.
+- collection: Palette
+  variable: Color/Automation/Medium/Ammonia
+  type: COLOR
+  modes: {}
+  reason: 암모니아 연료선 대응 (ISS 미팅에서 언급). OB Medium에 해당 항목 없음
+  status: proposed
+  ref: knowledge/research/insights.md

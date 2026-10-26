@@ -11,16 +11,19 @@ HD현대 선박 통합 솔루션(SDV 플랫폼)의 디자인 시스템과 대표
 
 ## Figma 폴더 (`99. 클로드테스트`)
 - `Source_Open Bridge`: OpenBridge 원본 12개. 수정 금지.
-- `Design System`: OpenBridge를 기반으로 HD에 맞게 수정해 가는 라이브러리.
-- `Key Screen`: 디자인 시스템으로 주요 화면을 테스트하는 곳.
+- `Design System`: HD-MDS Library, HD-MDS Icon Pack — OpenBridge 6.1 복제본을 HD에 맞게 수정해 가는 라이브러리.
+- `Key Screen`: Test Board — 디자인 시스템으로 주요 화면을 테스트하는 곳.
+- `figma.config.json`의 `legacy` 파일(HD-MDS · 00~04)은 사용하지 않습니다.
 
 ## 절대 규칙
 - 색·간격·반경·타이포는 **반드시 Variable/토큰 바인딩**. 하드코딩 hex 금지.
-- 테마(bright·day·dusk·night)는 **Variable mode**로 처리하고 variant로 만들지 않습니다.
+- 테마는 OB `Palette` 컬렉션의 모드(Day·Dusk BETA·Night BETA·Bright BETA), 크기는 `Component-size` 모드(Regular~XL)로 처리하고 variant로 만들지 않습니다.
+- 변수·컬렉션·모드 이름은 **OpenBridge 이름을 그대로** 씁니다. 새 토큰 체계를 만들지 않습니다. HD 변경은 `tokens/overrides`, 신규는 `tokens/additions`에 기록합니다.
 - 조작 상태(`interaction`)와 장비·경보 상태(`status`, `alarm`)는 **별도 variant 축**입니다.
-- 경보 색(`status.alarm|warning|caution`)은 경보 의미로만 씁니다. 장식·브랜드 강조에 쓰지 않습니다.
+- 경보 색(OB `Color/Alert/*`, `Color/Styles/Alarm|Warning|Caution/*`)은 경보 의미로만 씁니다. 장식·브랜드 강조에 쓰지 않습니다.
 - 상태는 **색만으로 구분하지 않습니다** (아이콘, 형태, 텍스트를 함께).
-- Products 파일에서는 라이브러리 인스턴스만 사용하고 detach 금지.
+- Test Board에서는 Library·Icon Pack 인스턴스만 사용하고 detach 금지.
+- OB 컴포넌트를 수정할 때 기존 variant 이름·기본값을 유지합니다 (기존 인스턴스가 깨지지 않게).
 - OpenBridge에서 온 요소는 컴포넌트 description에 `origin:`을 남깁니다 (라이선스·출처 추적).
 - `status: approved`가 아닌 스펙은 Figma 라이브러리에 publish하지 않습니다 (draft 페이지에만).
 

@@ -1,33 +1,41 @@
 id: valve
-name: Valve (mimic symbol)
+name: Valve two-way
 layer: maritime
 status: draft
 origin:
-  source: openbridge/automation/valve
-  decision: adapt
-  notes: HiCONiS 그래픽 빌더 SVG 심볼 체계와 대조 필요
-description: 공정도(미믹)에 배치되는 밸브 심볼. 클릭하면 별도 제어 창을 연다.
-refs: [knowledge/hiconis-philosophy.md, knowledge/standards/iec62288.md]
-anatomy: [body, actuator, state-fill, alarm-badge, tag-label]
+  decision: extend
+  page: 07 Automation
+  set: Valve two-way
+  notes: OB에는 장비 고장·통신 단절·경보·현장 수동 표현이 없음 → HiCONiS 요구로 확장
+description: 공정도(미믹)에 배치되는 2방향 밸브 심볼. 클릭하면 별도 제어 창을 연다.
+refs: [knowledge/hiconis-philosophy.md, knowledge/research/insights.md]
+baseline:                       # OB 6.1 원본 (2026-10-26 조회)
+  State: [Open, Static, Closed, Opening, Closing]
+  Type: [Digital, Analog, w. actuator generic, w. actuator piston]
 props:
-  type: [gate, butterfly, check, three-way]
-  status: [open, closed, intermediate, fault, comm-loss]
-  control: [remote, local-manual]
-  alarm: [none, caution, warning, alarm]
-  interaction: [default, hover, selected]
+  State: [Open, Static, Closed, Opening, Closing]
+  Type: [Digital, Analog, w. actuator generic, w. actuator piston]
+  Condition: [Normal, Fault, Comm-loss]
+  Local manual: { type: boolean, default: false }
+  Alert badge: { type: instance-swap }     # alert-badge 컴포넌트 (None/Caution/Warning/Alarm) — variant 폭발 방지
   show-tag: { type: boolean, default: true }
+changes:
+  - "Condition 축 추가: Fault, Comm-loss (HIC: 장비 상태 표현 규칙)"
+  - "Local manual 속성 추가: 원격 제어 장비와 현장 수동 장비 구분 (킥오프 노트 §6)"
+  - "Alert badge 추가: 경보 단계는 별도 alert-badge 컴포넌트로 (5×4×3=60 − 제외 8 = 52 variants)"
+  - "Opening/Closing은 OB 그대로 사용 → 명령값과 실제 상태 차이 표현 (ALM-05)"
 excludeCombinations:
-  - { type: check, control: remote }       # 체크밸브는 원격 제어 대상 아님
-  - { status: comm-loss, alarm: none }     # 통신 단절은 항상 경보 동반 (확인 필요)
+  - { Condition: Comm-loss, State: Opening }
+  - { Condition: Comm-loss, State: Closing }
 theming: variables
 tokens:
-  body.stroke: "fg.default"
-  state-fill.open: "medium.{medium}"
-  state-fill.closed: "bg.surface"
-  alarm-badge.fill: "status.{alarm}.fill"
-sizes:
-  default: { width: 32, height: 32 }
+  body.stroke: Color/Automation/Device/Primary-color
+  fill.open: Color/Automation/Medium/{medium}
+  alert-badge.alarm: Color/Alert/Alarm-color
+  alert-badge.warning: Color/Alert/Warning-color
+  alert-badge.caution: Color/Alert/Caution-color
+  comm-loss.background: Color/Alert/Low-integrity-background-color
+  comm-loss.border: Color/Alert/Low-integrity-border-color
 rules:
-  - "comm-loss는 색만으로 표현하지 않고 해칭 패턴 + 아이콘을 함께 쓴다"
-  - "local-manual은 원격 조작 불가임을 형태로 구분 (예: 수동 핸들 표기)"
-  - "명령값과 실제 상태가 다를 수 있음 — 'commanded' 중간 상태 표현 검토"
+  - "Comm-loss는 색만으로 표현하지 않고 해칭 패턴 + 아이콘을 함께 쓴다 (ALM-03)"
+  - "Local-manual은 원격 조작 불가임을 형태로 구분 (INP-02)"

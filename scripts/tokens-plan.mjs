@@ -1,42 +1,34 @@
-// tokens/의 DTCG JSON을 평탄화해 Figma Variables 계획(JSON)을 출력한다. ds-tokens-sync 스킬이 사용.
+// tokens/overrides, tokens/additions를 모아 Figma 적용 계획(JSON)을 출력한다. hd-tokens-apply 스킬이 사용.
+// 기본은 approved만 "apply"에 넣고, proposed는 "pending"으로 보여준다.
 import { readFileSync, readdirSync } from "node:fs";
-import { join, basename } from "node:path";
+import { join } from "node:path";
+import YAML from "yaml";
 
-const read = (p) => JSON.parse(readFileSync(p, "utf8"));
+const load = (dir) =>
+  readdirSync(dir)
+    .filter((f) => f.endsWith(".yaml"))
+    .flatMap((f) => (YAML.parse(readFileSync(join(dir, f), "utf8")) ?? []).map((e) => ({ ...e, file: join(dir, f) })));
 
-function flatten(node, path = [], type, out = []) {
-  const t = node.$type ?? type;
-  if ("$value" in node) {
-    out.push({ name: path.join("/"), type: t, value: node.$value, description: node.$description });
-    return out;
-  }
-  for (const [k, v] of Object.entries(node)) {
-    if (k.startsWith("$") || typeof v !== "object") continue;
-    flatten(v, [...path, k], t, out);
-  }
-  return out;
-}
+const toValue = (v) => (typeof v === "string" && /^\{.+\}$/.test(v) ? { alias: v.slice(1, -1) } : { value: v });
 
-const toRef = (v) => (typeof v === "string" && /^\{.+\}$/.test(v) ? { alias: v.slice(1, -1).replaceAll(".", "/") } : { value: v });
+const entries = [
+  ...load("tokens/overrides").map((e) => ({ ...e, kind: "override" })),
+  ...load("tokens/additions").map((e) => ({ ...e, kind: "addition" })),
+].map((e) => ({ ...e, modes: Object.fromEntries(Object.entries(e.modes).map(([m, v]) => [m, toValue(v)])) }));
 
-const primitive = readdirSync("tokens/primitive").flatMap((f) => flatten(read(join("tokens/primitive", f))));
-const themeDir = "tokens/semantic/themes";
-const themes = readdirSync(themeDir).map((f) => basename(f, ".json"));
-const semantic = {};
-for (const th of themes) {
-  for (const t of flatten(read(join(themeDir, `${th}.json`)))) {
-    (semantic[t.name] ??= { name: t.name, type: t.type, modes: {} }).modes[th] = toRef(t.value);
-  }
-}
-const status = readdirSync("tokens/status").flatMap((f) => flatten(read(join("tokens/status", f))));
+const key = (e) => `${e.collection}::${e.variable}`;
+const dupes = Object.entries(Object.groupBy(entries, key)).filter(([, v]) => v.length > 1).map(([k]) => k);
+const config = JSON.parse(readFileSync("figma.config.json", "utf8"));
 
-const skipped = [...primitive, ...status].filter((t) => t.value === "TBD").map((t) => t.name);
-const plan = {
-  collections: [
-    { name: "primitive", modes: ["value"], variables: primitive.filter((t) => t.value !== "TBD").map((t) => ({ ...t, value: toRef(t.value) })) },
-    { name: "semantic", modes: themes, variables: Object.values(semantic) },
-    { name: "status", modes: themes, variables: status.filter((t) => t.value !== "TBD").map((t) => ({ name: t.name, type: t.type, modes: Object.fromEntries(themes.map((th) => [th, toRef(t.value)])) })) },
-  ],
-  skipped,
-};
-console.log(JSON.stringify(plan, null, 2));
+console.log(
+  JSON.stringify(
+    {
+      target: config.files.library,
+      apply: entries.filter((e) => e.status === "approved"),
+      pending: entries.filter((e) => e.status === "proposed").map(({ collection, variable, kind, reason }) => ({ collection, variable, kind, reason })),
+      errors: dupes.map((k) => `duplicate entry: ${k}`),
+    },
+    null,
+    2,
+  ),
+);

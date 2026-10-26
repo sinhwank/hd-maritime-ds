@@ -10,6 +10,38 @@
       "Key Screen"
     ]
   },
+  "files": {
+    "library": {
+      "key": "Lzn4HaD45rVmbtvm2a5lrP",
+      "name": "HD-MDS Library (based on OB 6.1)",
+      "folder": "Design System",
+      "basedOn": "core-6.1"
+    },
+    "icons": {
+      "key": "v6Jgh6gLpEcpNPk1UsjXQA",
+      "name": "HD-MDS Icon Pack (based on OB 6.1)",
+      "folder": "Design System",
+      "basedOn": "icons"
+    },
+    "testBoard": {
+      "key": "tRJnqDtLtS8zg1bTPUeVfZ",
+      "name": "Test Board",
+      "folder": "Key Screen"
+    }
+  },
+  "themes": {
+    "bright": "Bright BETA",
+    "day": "Day",
+    "dusk": "Dusk BETA",
+    "night": "Night BETA"
+  },
+  "sizes": {
+    "regular": "Regular",
+    "medium": "Medium",
+    "large": "Large",
+    "xl": "XL"
+  },
+  "hdExtensionsPage": "12 HD Extensions",
   "openbridge": {
     "readOnly": true,
     "note": "원본. 절대 수정하지 않는다. 읽기·참조만.",
@@ -64,30 +96,29 @@
       }
     }
   },
-  "files": {
-    "foundation": {
-      "key": "cjp2cR8Mc6ogRiGHGzvony",
-      "name": "HD-MDS · 00 Foundation"
-    },
-    "core": {
-      "key": "fLnct9qamaMT4kCTQwIQyW",
-      "name": "HD-MDS · 01 Core UI"
-    },
-    "maritime": {
-      "key": "G2HogeEa0kg9OmWKmCrPdW",
-      "name": "HD-MDS · 02 Maritime UI"
-    },
-    "patterns": {
-      "key": "dOiNvMS6gjcj7KYHX9Qlzu",
-      "name": "HD-MDS · 03 Patterns"
-    },
-    "products": {
-      "key": "W70NjEuTMHnfKqtk6LRVAi",
-      "name": "HD-MDS · 04 Products"
+  "legacy": {
+    "note": "초기 스캐폴딩 때 만든 파일. OpenBridge 복제 방식으로 바뀌어 사용하지 않음. 보관 또는 삭제.",
+    "files": {
+      "foundation": {
+        "key": "cjp2cR8Mc6ogRiGHGzvony",
+        "name": "HD-MDS · 00 Foundation"
+      },
+      "core": {
+        "key": "fLnct9qamaMT4kCTQwIQyW",
+        "name": "HD-MDS · 01 Core UI"
+      },
+      "maritime": {
+        "key": "G2HogeEa0kg9OmWKmCrPdW",
+        "name": "HD-MDS · 02 Maritime UI"
+      },
+      "patterns": {
+        "key": "dOiNvMS6gjcj7KYHX9Qlzu",
+        "name": "HD-MDS · 03 Patterns"
+      },
+      "products": {
+        "key": "W70NjEuTMHnfKqtk6LRVAi",
+        "name": "HD-MDS · 04 Products"
+      }
     }
-  },
-  "componentFileByLayer": {
-    "core": "core",
-    "maritime": "maritime"
   }
 }
