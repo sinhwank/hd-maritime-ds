@@ -5,7 +5,7 @@ domain: navigation
 status: draft
 roles:
 - navigator
-scenario: 트랙 제어로 항로 감시 중, 다음 변침점 3.2 NM 전, 타선 017 CPA 0.42 NM 접근(Warning)
+scenario: 22:38 트랙 제어로 항로 감시 중(HDG 241°, 다음 WP3 3.2 NM 후 198°로 변침). 타선 017 CPA 0.42 NM / TCPA 8.2 min — CPA/TCPA Alarm · Category A(ECDIS에서만 ACK). Backup GYRO2 고장(Warning).
 context:
   operationMode:
   - sea-passage
@@ -17,7 +17,7 @@ display:
   input: touch
   themes:
   - day
-  size: medium
+  size: large
 modules:
 - id: topbar
   region: top
@@ -46,7 +46,7 @@ modules:
   notes: 모드 전환은 조작 영역으로 분리, 명령 진행 중 상태
 states:
 - normal
-- warning-cpa
+- alarm-cpa
 refs:
 - knowledge/explorations/hi-ins-concepts.md
 - tokens/explorations/alfalaval.yaml

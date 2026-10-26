@@ -5,7 +5,7 @@ domain: navigation
 status: draft
 roles:
 - navigator
-scenario: 트랙 제어 중 변침, ROT −12°/min, 러더 PORT 15°, 횡풍 20 kn, 수심 18 m
+scenario: '22:38 트랙 제어 중 변침: HDG 241°, ROT −12°/min(좌선회), 러더 PORT 15°, 상대풍 20.4 kn·078°(Caution: 횡풍 20 kn 초과), 수심 18.0 m · UKC 6.5 m. 미확인 Alarm 1(CPA/TCPA Cat A).'
 context:
   operationMode:
   - maneuvering
@@ -17,7 +17,7 @@ display:
   input: touch
   themes:
   - day
-  size: medium
+  size: large
 modules:
 - id: topbar
   region: top

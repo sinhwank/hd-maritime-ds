@@ -19,4 +19,16 @@
 
 ## critic
 
-방향별 결과는 아래에 이어서 기록한다.
+| 방향 | 판정 | high | 주요 high 항목 |
+|---|---|---|---|
+| Pleos | FAIL ×3 | 11 | 경보 칩 등급·건수 불일치, 해도 방향이 HDG와 반대, 위험 타선 미표시, Caution·확인됨 그룹 누락, 계기(나침반·러더·바람) 지시가 값과 불일치, Driving view 슬롯이 화면마다 다름 |
+| Kongsberg | FAIL ×3 | 14 | 위험 타선 미표시, 센서 FAIL이 정상처럼 보임, BAMS 등급 아이콘(Icon Pack 차단), **Cat A를 BAMS에서 ACK 가능(IEC 62923 위반)**, 소리 상태 모순, 통신 단절에 경보 색, 계기 방향 불일치 |
+| Alfa Laval | FAIL ×3 | 6 | 크기 모드가 기획·INP-01과 불일치(Medium→Large), 경보 카드 정렬, 위험 타선 미표시, comm-loss를 Caution으로 표시, 러더 방향, 수심/UKC 혼동 |
+
+### 스펙 수준 결정 (critic 지적 → 스펙 수정)
+- 타선 017 CPA/TCPA 등급을 화면마다 다르게 쓴 것을 **Alarm · Category A**로 통일. Cat A는 BAMS에서 ACK 불가(ECDIS에서 확인).
+- 시각 22:38 통일, 미확인 = Alarm 1 + Warning 2(Caution은 ACK 대상 아님), CID에 Caution(횡풍) 추가, 수심 18.0 m · UKC 6.5 m 분리.
+- Alfa Laval `display.size` medium → **large** (기획 문서·INP-01과 일치시킴, 작성 실수 정정).
+
+### 수정 지시 (builder 1회차)
+공통 C1~C10, 방향별 P1~P8 / K1~K10 / A0~A8 — 원문은 세션 작업 파일. 차단: Icon Pack 미연결(IEC 등급 아이콘·마름모 아이콘), 상태 파생 프레임은 다음 단계.

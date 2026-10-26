@@ -5,7 +5,8 @@ domain: navigation
 status: draft
 roles:
 - navigator
-scenario: 미확인 Alarm 1(CPA/TCPA), Warning 2(백업 GYRO·SOG 실패), Caution 3, 확인됨 다수
+scenario: '22:38 미확인: Alarm 1(CPA/TCPA, ECDIS1, Cat A — BAMS에서는 Silence만, ACK는 ECDIS), Warning 2(Backup GYRO·SOG 실패, RADAR1, Cat B). Caution 3(GNSS2 신호 없음 등 — ACK 대상 아님). 확인됨 다수. 소리 ON. 서버 Primary Active
+  / Secondary Standby.'
 context:
   operationMode:
   - sea-passage
@@ -17,7 +18,7 @@ display:
   input: touch
   themes:
   - day
-  size: medium
+  size: large
 modules:
 - id: topbar
   region: top
