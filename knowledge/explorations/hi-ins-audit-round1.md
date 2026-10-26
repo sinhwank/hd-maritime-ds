@@ -31,4 +31,4 @@
 - Alfa Laval `display.size` medium → **large** (기획 문서·INP-01과 일치시킴, 작성 실수 정정).
 
 ### 수정 지시 (builder 1회차)
-공통 C1~C10, 방향별 P1~P8 / K1~K10 / A0~A8 — 원문은 세션 작업 파일. 차단: Icon Pack 미연결(IEC 등급 아이콘·마름모 아이콘), 상태 파생 프레임은 다음 단계.
+공통 C1~C10, 방향별 P1~P8 / K1~K10 / A0~A8 — 원문은 `knowledge/explorations/harness/`. 차단: Icon Pack 미연결(IEC 등급 아이콘·마름모 아이콘), 상태 파생 프레임은 다음 단계.
